@@ -23,7 +23,7 @@ function chooseTheWinnerAndShowTheResult(humanScore, computerScore) {
   } else if (humanScore > computerScore) {
     console.log("You are a winner of the game in 5 rounds.");
   } else {
-    console.log("Computer wins the game of 5 rounds.");
+    console.log("Computer wins the game in 5 rounds.");
   }
 }
 
