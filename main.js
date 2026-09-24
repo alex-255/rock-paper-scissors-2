@@ -13,7 +13,7 @@ function getHumanChoice() {
 
 function getComputerChoice() {
   choices = ["rock", "paper", "scissors"];
-  index = Math.floor(Math.random() * 3);
+  index = Math.floor(Math.random() * choices.length);
   return choices[index];
 }
 
