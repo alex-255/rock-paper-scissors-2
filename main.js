@@ -20,30 +20,30 @@ function playGame() {
         resultsDivParagraph.textContent = "It's a tie!";
       } else if (computerChoice === "paper") {
         computerScore++;
-        resultsDivParagraph.textContent = "Computer wins!";
+        resultsDivParagraph.textContent = `Computer chose ${computerChoice}. Computer wins!`;
       } else if (computerChoice === "scissors") {
         humanScore++;
-        resultsDivParagraph.textContent = "Player wins!";
+        resultsDivParagraph.textContent = `Computer chose ${computerChoice}. You won!`;
       }
     } else if (humanChoice === "paper") {
       if (computerChoice === "paper") {
-        resultsDivParagraph.textContent = "It's a tie!";
+        resultsDivParagraph.textContent = `Computer chose ${computerChoice}. It's a tie!`;
       } else if (computerChoice === "rock") {
         humanScore++;
-        resultsDivParagraph.textContent = "Player wins!";
+        resultsDivParagraph.textContent = `Computer chose ${computerChoice}. You won!`;
       } else if (computerChoice === "scissors") {
         computerScore++;
-        resultsDivParagraph.textContent = "Computer wins!";
+        resultsDivParagraph.textContent = `Computer chose ${computerChoice}. Computer wins!`;
       }
     } else if (humanChoice === "scissors") {
       if (computerChoice === "scissors") {
-        resultsDivParagraph.textContent = "It's a tie!";
+        resultsDivParagraph.textContent = `Computer chose ${computerChoice}. It's a tie!`;
       } else if (computerChoice === "rock") {
         computerScore++;
-        resultsDivParagraph.textContent = "Computer wins!";
+        resultsDivParagraph.textContent = `Computer chose ${computerChoice}. Computer wins!`;
       } else if (computerChoice === "paper") {
         humanScore++;
-        resultsDivParagraph.textContent = "Player wins!";
+        resultsDivParagraph.textContent = `Computer chose ${computerChoice}. Player wins!`;
       }
     }
 
@@ -65,11 +65,9 @@ function playGame() {
     if (humanScore === computerScore) {
       resultsDivScore.textContent = "It's a tie. No winner in 5 rounds.";
     } else if (humanScore > computerScore) {
-      resultsDivScore.textContent =
-        "Congratulations! You are a winner of the game in 5 rounds.";
+      resultsDivScore.textContent = `Congratulations! You are a winner of the game in 5 rounds. Your score: ${humanScore}. Computers score: ${computerScore}.`;
     } else {
-      resultsDivScore.textContent =
-        "Sorry! Computer wins the game in 5 rounds.";
+      resultsDivScore.textContent = `Sorry! Computer wins the game in 5 rounds. Your score: ${humanScore}. Computers score: ${computerScore}.`;
     }
   }
 }
